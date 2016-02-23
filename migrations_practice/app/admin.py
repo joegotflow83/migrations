@@ -1,3 +1,10 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import PlayerStat
+
+
+@admin.register(PlayerStat)
+class PlayerStatAdmin(admin.ModelAdmin):
+
+
+	pass

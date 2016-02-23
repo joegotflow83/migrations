@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
-{% block title %}TIY{% endblock title %}
+{% block title %}New England Patriots{% endblock title %}
 
 {% block content %}
 
-<div class="jumbotron text-center">
+<div class="center-align">
 	<h1>Check out my players!</h1>
-	<a href="{% url 'list_players' %}" class="btn btn-primary">Go to players!</a>
+	<a class="waves-effect waves-red btn-large" href="{% url 'list_players' %}">Go to players!</a>
 </div>
 
 {% endblock %}

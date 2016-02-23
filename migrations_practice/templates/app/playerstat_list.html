@@ -4,28 +4,24 @@
 
 {% block content %}
 
-
-{% for player in object_list %}
-	<div class="players">
-		<li><a href="/players/{{ player.id }}">{{ player.player_name }}</a></li>
-	</div>
-{% endfor %}
+<div class='header'>
+<h1>Patriots Wide Receivers</h1>
 
 {% for player in object_list %}
 	<div>
 		<br>
 		<br>
-		<table style="width:100%">
+		<table class="highlight">
 			<tr>
-				<th>Player Name</th>
-				<th>Receptions</th>
-				<th>Yards</th>
-				<th>Yards/Rec</th>
-				<th>Longest</th>
-				<th>Touchdowns</th>
+				<th class="info">Player Name</th>
+				<th class="info">Receptions</th>
+				<th class="info">Yards</th>
+				<th class="info">Yards/Rec</th>
+				<th class="info">Longest</th>
+				<th class="info">Touchdowns</th>
 			</tr>
 			<tr>
-				<td>{{ player.player_name }}</td>
+				<td><a href="/players/{{ player.id }}">{{ player.player_name }}</a></td>
 				<td>{{ player.rec }}</td>
 				<td>{{ player.yds }}</td>
 				<td>{{ player.yds_rec }}</td>

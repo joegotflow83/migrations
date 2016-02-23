@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% block title %}{{ object.player_name }}{% endblock title %}
+
 {% block content %}
 <div class="stats">
 	<h1>{{ object.player_name }}</h1>
@@ -8,6 +10,8 @@
 	<p>Yards/Rec: {{ object.yds_rec }}</p>
 	<p>Longest: {{ object.longest_yds }}</p>
 	<p>Touchdowns: {{ object.touchdowns }}</p>
+	<p>Click <a href="/players/">here</a> to go back.</p>
+
 </div>
 <style>
 	.stats {
