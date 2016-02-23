@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="stats">
+	<h1>{{ object.player_name }}</h1>
+	<p>Receptions: {{ object.rec }}</p>
+	<p>Yards: {{ object.yds }}</p>
+	<p>Yards/Rec: {{ object.yds_rec }}</p>
+	<p>Longest: {{ object.longest_yds }}</p>
+	<p>Touchdowns: {{ object.touchdowns }}</p>
+</div>
+<style>
+	.stats {
+		padding-left: 60px;
+	}
+</style>
+{% endblock %}

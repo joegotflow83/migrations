@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}Players{% endblock title %}
+
+{% block content %}
+
+
+{% for player in object_list %}
+	<div class="players">
+		<li><a href="/players/{{ player.id }}">{{ player.player_name }}</a></li>
+	</div>
+{% endfor %}
+
+{% for player in object_list %}
+	<div>
+		<br>
+		<br>
+		<table style="width:100%">
+			<tr>
+				<th>Player Name</th>
+				<th>Receptions</th>
+				<th>Yards</th>
+				<th>Yards/Rec</th>
+				<th>Longest</th>
+				<th>Touchdowns</th>
+			</tr>
+			<tr>
+				<td>{{ player.player_name }}</td>
+				<td>{{ player.rec }}</td>
+				<td>{{ player.yds }}</td>
+				<td>{{ player.yds_rec }}</td>
+				<td>{{ player.longest_yds }}</td>
+				<td>{{ player.touchdowns }}</td>
+			</tr>
+		</table>
+	</div>
+{% endfor %}
+
+<style>
+	.players {
+		padding-top: 40px;
+		padding-left: 60px;
+	}
+
+	.td {
+		font-family: "Lucida Console", Monaco, monospace;
+	}
+</style>
+{% endblock %}
