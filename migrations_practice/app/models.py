@@ -10,3 +10,7 @@ class PlayerStat(models.Model):
 	yds_rec = models.FloatField(default=0.0)
 	longest_yds = models.IntegerField(default=0)
 	touchdowns = models.IntegerField(default=0)
+
+	def __str__(self):
+		"""Prettify output"""
+		return self.player_name
